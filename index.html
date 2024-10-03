@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LIFE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div id="box1">
+    <div class="heading">LIFE</div>
+    <div class="subheading">Your own creation</div>
+  </div>
+
+  <div id="box2">
+    <div class="heading">What is this?</div>
+    <div class="subheading">This game is a zero-player game made by John Conway, a British Mathematician. However here, you have the right to manipulate the rules and create your own patterns, test your universe and see it growing or dying.</div>
+  </div>
+
+
+  <div id="box3">
+    <div class="heading">Welcome to the Rule Book of your universe</div>
+    <div id="ruleBox">
+      <ul>
+        <li>Any living cell with less than <span id="underpopulationSpan">2</span> neighbours dies.</li>
+        <li>Any living cell with more than <span id="overpopulationSpan">3</span> neighbours dies.</li>
+        <li>Any living cell with <span id="liveSpan">2</span> neighbours survives to the next generation.</li>
+        <li>Any dead cell with <span id="reproductionSpan">3</span> neighbours becomes alive.</li>
+      </ul>
+    <div class="button" id="editButton">Edit</div>
+    </div>
+    <div class="heading" id="controlHeading">Controls</div>
+    <div id="control">
+      <div id="startStop" class="controlButton"><img src="resources/play.svg" alt="pausePlay"></div>
+      <div id="nextGeneration" class="controlButton"><img src="resources/next.svg" alt="next"></div>
+    </div>
+
+  </div>
+  <div id="universe"></div>
+  <div id="universeStats">
+    <div>Generation: <span id="generationSpan">0</span></div>
+    <div>Population: <span id="populationSpan">0</span></div>
+    <div>Grid size: <span id="gridSizeSpan">0x0</span></div>
+    <div>Refresh rate: <span id="refreshRateSpan">1000</span>ms</div>
+  </div>
+  
+  <div id="settings">
+    <div class="heading">Settings</div>
+    <div>Grid height: <input type="number" id="gridHeightInput" value="15"></div>
+    <div>Grid width: <input type="number" id="gridWidthInput" value="15"></div>
+    <div>Refresh rate: <input type="number" id="refreshRateInput" value="1000"></div>
+    <div class="button" id="runButton">Run</div>
+    <div class="subheading">Note: grid size, refresh rate and your system can affect the performance.</div>
+  </div>
+</body>
+
+</html>

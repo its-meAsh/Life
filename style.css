@@ -1,0 +1,167 @@
+@font-face {
+  font-family: font1;
+  src: url(resources/font1.ttf);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(resources/font2.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151818;
+  user-select: none;
+}
+
+#box1 .heading {
+  font-family: font1;
+  font-size: 1000%;
+}
+
+#box1 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: #30D2C5;
+  flex-direction: column;
+}
+
+#box1 .subheading {
+  font-family: font2;
+  font-size: 200%;
+  color: #FFFFFF;
+}
+
+#box2 {
+  color: #FFFFFF;
+}
+
+#box2>div {
+  font-family: font2;
+  font-size: 120%;
+  padding: 1vh 5vh;
+}
+
+#box3 {
+  margin-top: 20vh;
+  background-color: rgba(256, 256, 256, 0.1);
+  font-family: font2;
+  padding: 5vh;
+  color: #FFFFFF;
+}
+
+#box3 .heading {
+  font-size: 130%;
+}
+
+#universe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#universe>div {
+  display: grid;
+  overflow: scroll;
+  max-width: 150vh;
+  max-height: 75vh;
+  margin-top: 10vh;
+  gap: 0.25vh;
+  background-color: grey;
+  padding: 0.25vh;
+}
+#universe>div::webkit-scrollbar-{
+  display: none;
+}
+.cell {
+  width: 5vh;
+  height: 5vh;
+  cursor: pointer;
+}
+
+#universeStats {
+  margin-bottom: 5vh;
+  color: #FFFFFF;
+  font-family: font2;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 20vh;
+}
+
+#ruleBox{
+  padding: 0 3vh;
+}
+
+.controlButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  box-shadow: 0 0 0.25vh black;
+  border-radius: 0.25vh;
+  transition: all 0.2s linear;
+  background-color: #30d2c5;
+  color: #151818;
+  width: 3vh;
+  height: 3vh;
+}
+
+.controlButton:hover{
+  transform: scale(1.1)
+}
+
+#control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20vh;
+  margin: 5vh 0;
+}
+
+#box3 .heading{
+  margin-top: 5vh;
+}
+
+.button{
+  padding: 1.5vh 3vh;
+  border-radius: 0.25vh;
+  background-color: #30d2c5;
+  color: #151818;
+  margin: 2vh;
+  width: max-content;
+  transition: all 0.2s linear;
+}
+
+.button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#settings{
+  font-family: font2;
+  padding: 0 10vh;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  margin: 10vh 0;
+}
+input{
+  background-color: transparent;
+  border: 0.25vh solid #30d2c5;
+  padding: 1vh;
+  border-radius: 0.25vh;
+  color: #FFFFFF;
+  font-family: font2;
+}
+
+#settings .heading{
+  font-size: 170%;
+}
